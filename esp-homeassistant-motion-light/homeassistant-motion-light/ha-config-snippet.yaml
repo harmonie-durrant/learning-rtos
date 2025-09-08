@@ -1,0 +1,24 @@
+mqtt:
+  light:
+    - name: "Arduino LED"
+      command_topic: "arduino/led"
+      state_topic: "arduino/led/state"
+      payload_on: "ON"
+      payload_off: "OFF"
+      qos: 0
+      optimistic: false
+  sensor:
+    - name: "Arduino Motion"
+      state_topic: "arduino/motion/state"
+      qos: 0
+      device_class: motion
+      payload_on: "ON"
+      payload_off: "OFF"
+  switch:
+    - name: "Arduino Manual Override"
+      command_topic: "arduino/manualoverride"
+      state_topic: "arduino/manualoverride/state"
+      payload_on: "ON"
+      payload_off: "OFF"
+      qos: 0
+      optimistic: false
