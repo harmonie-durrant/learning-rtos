@@ -1,0 +1,18 @@
+mqtt:
+  light:
+    - name: "Arduino LED"
+      command_topic: "arduino/led"
+      state_topic: "arduino/led/state"
+      payload_on: "ON"
+      payload_off: "OFF"
+      qos: 0
+      optimistic: false
+  sensor:
+    - name: "Arduino Temperature"
+      state_topic: "arduino/temperature/state"
+      unit_of_measurement: "°C"
+      qos: 0
+    - name: "Arduino Humidity"
+      state_topic: "arduino/humidity/state"
+      unit_of_measurement: "%"
+      qos: 0

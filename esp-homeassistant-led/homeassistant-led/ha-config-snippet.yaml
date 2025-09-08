@@ -1,0 +1,9 @@
+mqtt:
+  light:
+    - name: "Arduino LED"
+      command_topic: "arduino/led"
+      state_topic: "arduino/led/state"
+      payload_on: "ON"
+      payload_off: "OFF"
+      qos: 0
+      optimistic: false
