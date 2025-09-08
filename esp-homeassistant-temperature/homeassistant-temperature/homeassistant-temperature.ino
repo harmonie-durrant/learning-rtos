@@ -29,7 +29,7 @@ const char led_state_topic[] = "arduino/led/state";
 #include "DHT.h"
 
 #define DHTPIN 13
-#define DHTTYPE DHT11
+#define DHTTYPE DHT22
 
 DHT dht(DHTPIN, DHTTYPE);
 
