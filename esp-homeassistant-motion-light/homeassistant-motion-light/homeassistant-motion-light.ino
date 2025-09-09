@@ -110,16 +110,16 @@ void setup() {
   Serial.println("You're connected to the network");
   Serial.println();
 
-    mqttClient.setUsernamePassword("harmonie", "Harmonie02!");
-    while (!mqttClient.connect(broker, port)) {
-      Serial.print("MQTT connection failed! Error code = ");
-      Serial.println(mqttClient.connectError());
-      Serial.println("Retrying MQTT connection in 5 seconds...");
-      delay(5000);
-      if (WiFi.status() != WL_CONNECTED) {
-        connect_to_wifi();
-      }
+  mqttClient.setUsernamePassword("harmonie", "Harmonie02!");
+  while (!mqttClient.connect(broker, port)) {
+    Serial.print("MQTT connection failed! Error code = ");
+    Serial.println(mqttClient.connectError());
+    Serial.println("Retrying MQTT connection in 5 seconds...");
+    delay(5000);
+    if (WiFi.status() != WL_CONNECTED) {
+      connect_to_wifi();
     }
+  }
 
   Serial.println("You're connected to the MQTT broker!");
   Serial.println();
